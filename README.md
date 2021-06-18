@@ -1,4 +1,5 @@
-
+# WORKSHOP WEBSITE
+http://workshops.angulararchitects.io/mz/ae8a7ab9-6a0a-42db-9544-8e92963de4a7/#welcome
 
 # AdvancedNxWorkspace
 
