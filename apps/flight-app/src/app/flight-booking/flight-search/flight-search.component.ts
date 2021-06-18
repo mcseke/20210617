@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { flightsLoaded, loadFlights, updateFlight } from '../+state/flight-booking.actions';
 import { take } from 'rxjs/operators';
-import { selectedFilteredFlights } from '../+state/flight-booking.selectors';
+import { selectedFilteredFlights, selectFlightsWithParam } from '../+state/flight-booking.selectors';
 
 @Component({
   selector: 'flight-search',
@@ -38,8 +38,8 @@ export class FlightSearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('onInit');
-    this.flights$ = this.store.select(selectedFilteredFlights);
+    // this.flights$ = this.store.select(selectedFilteredFlights);
+    this.flights$ = this.store.select(selectFlightsWithParam([3]));
   }
 
   search(): void {
